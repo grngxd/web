@@ -44,6 +44,8 @@ const ignores = [
   "**/yarn.lock",
   "**/server",
   "eslint.config.js",
+  "netlify.toml",
+  "**/entry.netlify-edge.tsx",
 ];
 
 export default tseslint.config(

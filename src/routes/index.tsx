@@ -1,4 +1,4 @@
-import { component$, useStore, $, useTask$, useVisibleTask$, useSignal, isServer } from "@builder.io/qwik";
+import { component$, useTask$, useSignal } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { MingcuteArrowsDownLine } from "~/components/icons/Arrow";
 import { MingcuteDiscordFill } from "~/components/icons/Discord";
@@ -11,7 +11,7 @@ export default component$(() => {
 	const gh = useSignal<GithubUser | null>(null)
 	const repos = useSignal<GithubRepo[]>([])
 
-	useTask$(async ({ track }) => {
+	useTask$(async () => {
 		lan.value = await lanyard.me()		
 		gh.value = await github.me()
 

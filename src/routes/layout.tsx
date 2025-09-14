@@ -1,4 +1,4 @@
-import { $, component$, Slot, useOnDocument, useVisibleTask$ } from '@builder.io/qwik';
+import { component$, Slot, useVisibleTask$ } from '@builder.io/qwik';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
